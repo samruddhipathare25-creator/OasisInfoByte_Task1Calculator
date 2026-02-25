@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #9df3e6, #8ec5fc);
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background: #222;
+    padding: 22px;
+    border-radius: 25px;
+    width: 340px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+}
+
+.screen {
+    background: #eae6e6;
+    border-radius: 15px;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+
+.history {
+    font-size: 0.9rem;
+    color: #aaa;
+    text-align: left;
+}
+
+.display {
+    font-size: 2.2rem;
+    text-align: right;
+    font-weight: bold;
+    color: rgb(190, 195, 93);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+}
+
+button {
+    padding: 16px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: #333;
+    color: white;
+    box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+    transition: 0.1s;
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0,0,0,0.4);
+}
+
+/* Operator buttons */
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(3),
+button:nth-child(4),
+button:nth-child(9),
+button:nth-child(10),
+button:nth-child(14),
+button:nth-child(15),
+button:nth-child(19),
+button:nth-child(20) {
+    background: #ff9f0a;
+    color: black;
+}
+
+/* Clear & Delete */
+button:nth-child(4),
+button:nth-child(5) {
+    background: #ff453a;
+}
+
+/* ENTER button */
+.enter {
+    grid-column: span 2;
+    background: #30d158;
+    color: black;
+    font-weight: bold;
+}
